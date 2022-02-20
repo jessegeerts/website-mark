@@ -104,7 +104,7 @@ IMG {
   display: grid;
   }
 /*Grid area 7: foto */
-.foto {
+.Foto {
   display: grid;
   overflow: hidden; /* een te grote foto wordt afgekapt */
   padding: 5px;
@@ -112,6 +112,12 @@ IMG {
   box-sizing:border-box;
   max-height: 100%;
   /*background-color: black; */
+}
+
+.Foto > IMG {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
 
