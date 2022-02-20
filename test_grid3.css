@@ -196,7 +196,7 @@ IMG {
     'menu menu menu header header header header toptekst toptekst historie historie historie'
     'foto foto foto hoofdtekst hoofdtekst hoofdtekst hoofdtekst hoofdtekst hoofdtekst scrollbar scrollbar scrollbar'
     'foto foto foto hoofdtekst hoofdtekst hoofdtekst hoofdtekst hoofdtekst hoofdtekst scrollbar scrollbar scrollbar'
-    'weer weer weer weer weer weer weer weer footer scrollbar scrollbar scrollbar';
+    'weer weer weer weer weer weer weer footer footer scrollbar scrollbar scrollbar';
   grid-gap: 1px;
   background-color: orange; /* tijdens ontwikkeling; om te zien welk scherm actief is */
   padding: 5px;
