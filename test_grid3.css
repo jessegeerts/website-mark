@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+body
+{font-family: "Lucida Sans", Verdana, Helvetica, Sans-serif;
+  font-size: 100%; padding: 0; margin: 0;
+  overflow: hidden;
+ }
+
+.background
+{ background-image: url("2008 huis en dorp_small.jpg"); 
+  /*background-image: url("fototest.jpg");*/
+  background-size: cover;
+  position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.8;
+}
+
+h3 {
+  padding-top: 0; line-height: 1px; margin: 0;
+  text-align: left; color: darkred;
+  }
+
+h4 { line-height: 1px; margin: 0;
+  color: blue; background: red;
+  }
+  
+.left { text-align: left;  color:rgb(116, 4, 4); 
+}
+
+.center { text-align: center; color: rgb(116, 4, 4); margin: auto; 
+    position: relative; 
+}
+
+.topcenter {text-align: center; color: blue; position:sticky;
+ } 
+ 
+.justify { text-align: justify;  color:midnightblue; padding-left: 10px; padding-right: 10px;
+}
+
+.item0 { grid-area: toptekst; overflow: auto;}
+.item1 { grid-area: header;}
+.item2 { grid-area: menu;}
+.item3 { grid-area: weer; width:min-content;}
+.item4 { grid-area: hoofdtekst; overflow: auto;}
+.item5a {grid-area: historie;}
+.item5 { grid-area: scrollbar; text-align: left; overflow: auto;}
+.item6 { grid-area: footer;}
+.item7 { grid-area: foto; margin: 0px; padding: 0px;}
+
+.toptekst {
+  display: grid;
+  text-align: center;
+  overflow: auto;
+  background-color: lightpink;
+  font-size: 0.75em;
+  box-sizing:border-box;
+  padding: 10px;
+}
+/*Item4: centrale tekst */
+.hoofdtekst {
+ display: grid;
+ padding: 10px;
+ text-align:center;
+ overflow: auto;
+}
+
+/*tekstformat voor koppen Scrollbar (Historie) */
+.ltekst {text-align: left; color: darkred; padding: 10px;	margin: 0; font-size: 0.9em;}
+
+.ctekst {text-align: center; color: black; padding: 10px}
+
+.footer {text-align: center; color: rgb(14, 13, 13); padding: 40px; font-size: 0.6em;}
+
+
+/* Scrollbar voor historisch overzicht */
+.scrollbar {
+ display: grid;
+ padding: 10px;
+ text-align:center;
+ overflow: auto;
+}
+
+IMG {
+  display: grid;
+  max-width: 100%; 
+  height: auto;
+ /* border-radius: 50%; */
+  overflow: auto;
+  object-fit: contain;
+  box-sizing:border-box;
+}
+
+/*Grid area 1: header */
+.header {
+  display: grid;
+  overflow: hidden; /* een te grote foto wordt afgekapt */
+  max-height: 135px;
+}
+
+.historie {
+  display: grid;
+  }
+/*Grid area 7: foto */
+.foto {
+  display: grid;
+  overflow: hidden; /* een te grote foto wordt afgekapt */
+  padding: 5px;
+  font-size: 0.75em;
+  box-sizing:border-box;
+  max-height: 100%;
+  /*background-color: black; */
+}
+
+
+/*Menu voor keuzemenu om pagina's te kiezen */
+.menu {
+  margin: 0;
+  padding: 0;
+  background-color:rosybrown;
+  position:sticky;
+  overflow: auto;
+  font-size: 0.7em;
+}
+
+.menu a {
+  display: grid;
+  color: white;
+  padding: 5px;
+  text-decoration:none;
+}
+ 
+.menu a.active {
+  background-color:yellowgreen;
+  color: rgb(170, 5, 5);
+  font-size: 1.1em;
+  font-weight:bold;
+}
+
+.menu a:hover {
+  background-color: #555;
+  color: white;
+}
+
+
+
+/* Gridcontainer voor pagina-indeling Mobiele telefoon-scherm*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+/*  grid-template-rows: 1fr 1fr 8fr 5fr 2fr 1fr; */
+  grid-template-areas:
+    'header header header'
+    'menu menu menu'
+	  'hoofdtekst hoofdtekst hoofdtekst'
+	  'scrollbar scrollbar scrollbar'
+    'weer weer weer'
+	  'footer footer footer';
+  grid-gap: 1px;
+  background-color: silver; /* tijdens ontwikkeling; om te zien welk scherm actief is */
+  padding: 10px;
+  opacity:unset;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Gridcontainer voor pagina-indeling iPad-scherm*/
+@media only screen and (min-width: 600px) {
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 4fr 12fr 12fr 8fr 1fr;
+  grid-template-areas:
+    'header header header header header header toptekst toptekst toptekst'
+    'menu menu menu menu hoofdtekst hoofdtekst hoofdtekst hoofdtekst hoofdtekst'
+	  'scrollbar scrollbar scrollbar scrollbar hoofdtekst hoofdtekst hoofdtekst hoofdtekst hoofdtekst '
+    'weer weer weer weer weer weer weer weer weer '
+	  'footer footer footer footer footer footer footer footer footer';
+  grid-gap: 1px;
+  background-color: yellow; /* tijdens ontwikkeling; om te zien welk scherm actief is */
+  height: 100vh;
+  width: 100vw;
+  padding: 10px;
+}
+}
+
+/* Gridcontainer voor pagina-indeling PC-scherm*/
+ @media only screen and (min-width: 768px) {
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr 2fr 2fr 2fr 2fr 2fr 1fr 1fr 1fr ;
+  grid-template-rows: 135px 10fr 25fr 20fr;
+  grid-template-areas:
+    'menu menu menu header header header header toptekst toptekst historie historie historie'
+    'foto foto foto hoofdtekst hoofdtekst hoofdtekst hoofdtekst hoofdtekst hoofdtekst scrollbar scrollbar scrollbar'
+    'foto foto foto hoofdtekst hoofdtekst hoofdtekst hoofdtekst hoofdtekst hoofdtekst scrollbar scrollbar scrollbar'
+    'weer weer weer weer weer weer weer weer footer scrollbar scrollbar scrollbar';
+  grid-gap: 1px;
+  background-color: orange; /* tijdens ontwikkeling; om te zien welk scherm actief is */
+  padding: 5px;
+  height: 100vh; /* de hele hoogte van het scherm */
+  width: 100vw;  /* de hele breedte van het scherm */
+}
+}
+
+.grid-container > div {
+  text-align: center;
+  border: 10px solid green /*Nu nog grote gekleurde borders gezet voor een duidelijk beeld; later weghalen */
+}
+
+.grid-container::before {
+ background-image: url("2008 huis en dorp.jpg"); 
+ background-size: cover;
+ content: "";
+ position: absolute;
+ z-index: -1;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ opacity: 0.75; /*de helderheid van de achtergrond*/
+  } 
+}
