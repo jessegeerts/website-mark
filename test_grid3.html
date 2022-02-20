@@ -16,10 +16,12 @@
 <DIV CLASS ="grid-container::before">
 </DIV>
     <DIV CLASS="grid-container">
-      <DIV CLASS="Item0">
-        <P CLASS = "toptekst">Dit is de website over ons huis in Italie dat we in 2008 kochten, en sindsdien aan het verbouwen zijn.
-         en dit is een 2de stukje tekst; en nu ook nog een derde stukje. Maar dat loopt er weer overheen; Q2: terwijl er een scrollbar zou moeten komen. Net als bij de historie: Item5. EN Q2.2: waarom beslaat deze tekst niet twee kolommen? Zie CSS regel 190: definitie Grid COntainer.</P>
-      </DIV>  <!-- item0 -->
+      <DIV CLASS="item0">
+        <DIV CLASS="toptekst">
+         Dit is de website over ons huis in Italie dat we in 2008 kochten, en sindsdien aan het verbouwen zijn.
+         en dit is een 2de stukje tekst; en nu ook nog een derde stukje. Maar dat loopt er weer overheen; Nu niet meer! Q2: terwijl er een scrollbar zou moeten komen. Die is er nu. Net als bij de historie: Item5. EN Q2.2: waarom beslaat deze tekst niet twee kolommen? Zie CSS regel 190: definitie Grid COntainer. Hij besloeg alleen die ene kolom omdat jouw CSS definities betrekking hadden op divs, niet op de paragraph. 
+        </DIV>
+      </DIV>
 
       <DIV CLASS="item1">
         <DIV CLASS="header">
@@ -48,7 +50,6 @@
 
       <DIV CLASS="item3">
         <!-- https://www.ilmeteo.net/widget/ -->
-
         <DIV ID="cont_433b249ef7e9ccb10e10f3ace045afcd">
           <SCRIPT TYPE="text/javascript" ASYNC="" SRC="https://www.ilmeteo.net/wid_loader/433b249ef7e9ccb10e10f3ace045afcd">
           </SCRIPT>
@@ -57,7 +58,7 @@
       </DIV> <!-- item3 -->
 
       <DIV CLASS="item4">
-        <P CLASS="center">Hoofdtekst; en dat is een lange tekst Hoofdtekst; en dat is een lange tekst<BR>
+        <DIV CLASS="center">Hoofdtekst; en dat is een lange tekst Hoofdtekst; en dat is een lange tekst<BR>
         Hoofdtekst; en dat is een lange tekst<BR>
         Hoofdtekst; en dat is een lange tekst<BR>
         Hoofdtekst; en dat is een lange tekst<BR>
@@ -72,7 +73,7 @@
         Hoofdtekst; en dat is een lange tekst Hoofdtekst; en dat is een lange tekst Hoofdtekst; en dat is een lange tekst Hoofdtekst; en dat is een lange tekst Hoofdtekst; en dat is een lange tekst
         Hoofdtekst; en dat is een lange tekst<BR>
         En nog veel meer tekst!!!!!!!!!!!
-      Q1: Deze tekst zou een scrollbar moeten krijgen als je het venster smaller maakt. Waarom gebeurt dat niet?</P>
+      Q1: Deze tekst zou een scrollbar moeten krijgen als je het venster smaller maakt. Waarom gebeurt dat niet?</DIV>
       </DIV><!-- item4 -->
 
       <DIV CLASS="item5a"> <!-- kop boven de Scrollbar historie-->
@@ -150,17 +151,17 @@
       </DIV><!-- item5 -->
 
       <DIV CLASS="item6">
-        <P CLASS="footer">Copyright Karin en Mark - 2022
-          Q5: waarom beslaat deze Item6 niet twee kolommen? Zie CSS regel 190, definitie van Gridcontainer. Zie ook Q2.2 </Q2>
-        </P>
+        <DIV CLASS="footer">Copyright Karin en Mark - 2022
+          Q5: waarom beslaat deze Item6 niet twee kolommen? Zie CSS regel 190, definitie van Gridcontainer. Zie ook Q2.2 
+        </DIV>
       </DIV><!-- item6 -->
 
       <DIV CLASS="item7">
        <!--- <DIV CLASS="foto"> -->
         <DIV CLASS="Foto">
            <BR>
-            <p CLASS="foto">De foto toont zich goed; maar ik wil graag dat die de hele breedte van de container beslaat. Q3: Waarom gebeurt dat niet. En Q4: bij smallere windows moet er een scrollbar komen. Net als bij de Historie (Item5).
-            </p>
+            <DIV CLASS="foto">De foto toont zich goed; maar ik wil graag dat die de hele breedte van de container beslaat. Q3: Waarom gebeurt dat niet. En Q4: bij smallere windows moet er een scrollbar komen. Net als bij de Historie (Item5).
+            </DIV>
             <IMG SRC="2008 voorzijde huis-small.jpg" ALT = "Het huis vóór de koop"  ->
         </DIV>
       </DIV>  <!-- item7 -->

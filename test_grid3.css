@@ -43,7 +43,7 @@ h4 { line-height: 1px; margin: 0;
 .item0 { grid-area: toptekst; overflow: auto;}
 .item1 { grid-area: header;}
 .item2 { grid-area: menu;}
-.item3 { grid-area: weer; width:min-content;}
+.item3 { grid-area: weer; width:min-content; overflow: auto;}
 .item4 { grid-area: hoofdtekst; overflow: auto;}
 .item5a {grid-area: historie;}
 .item5 { grid-area: scrollbar; text-align: left; overflow: auto;}
@@ -53,7 +53,7 @@ h4 { line-height: 1px; margin: 0;
 .toptekst {
   display: grid;
   text-align: center;
-  overflow: auto;
+  overflow-y: auto;
   background-color: lightpink;
   font-size: 0.75em;
   box-sizing:border-box;
